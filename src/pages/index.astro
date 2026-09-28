@@ -1,7 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -9,42 +7,108 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			body {
+				font-family: 'Courier New', monospace;
+				margin: 0;
+				padding: 0;
+				background: #0a0a0a;
+				color: #00ff00;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 100vh;
+				text-align: center;
+			}
+			main {
+				max-width: 900px;
+				padding: 2rem;
+			}
+			h1 {
+				font-size: 3.5rem;
+				margin: 0 0 2rem 0;
+				color: #ff0000;
+				text-shadow: 0 0 10px #ff0000;
+				letter-spacing: 2px;
+			}
+			p {
+				font-size: 1.3rem;
+				line-height: 1.8;
+				margin-bottom: 1.5rem;
+			}
+			.highlight {
+				color: #ff4444;
+				font-weight: bold;
+			}
+			.terminal {
+				background: #1a1a1a;
+				border: 2px solid #00ff00;
+				padding: 1.5rem;
+				margin: 2rem 0;
+				text-align: left;
+				font-size: 1.1rem;
+			}
+			.blink {
+				animation: blink 1s infinite;
+			}
+			@keyframes blink {
+				0%, 50% { opacity: 1; }
+				51%, 100% { opacity: 0; }
+			}
+		</style>
 	</head>
 	<body>
-		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>STOP SKIDDING</h1>
+			
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				Yeah, you. The one copy-pasting code you don't understand. The one downloading "hacking tools" from GitHub thinking you're elite. You're not a hacker. You're not even a programmer. You're a <span class="highlight">script kiddie</span>, and everyone knows it.
 			</p>
+
+			<div class="terminal">
+				<p>$ whoami</p>
+				<p>> script_kiddie_detected</p>
+				<p>$ cat /proc/self/status | grep "Skills:"</p>
+				<p>> Skills: 0</p>
+				<p>> Actual_Knowledge: None</p>
+				<p>> Copy_Paste_Ability: Expert<span class="blink">_</span></p>
+			</div>
+
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
+				You really thought running someone else's exploit makes you dangerous? You can't write a function. You can't debug an error. Hell, you probably don't even know what a compiler is. You just run <span class="highlight">python exploit.py</span> and pray it works.
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
+
 			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
+				Every real developer can smell you from a mile away. You ask questions that Google answered 10 years ago. You don't read documentation. You don't understand the code you're running. You just want the glory without putting in the work.
 			</p>
+
 			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				Here's the truth: <span class="highlight">Nobody respects you.</span> Not the developers. Not the security researchers. Not even other script kiddies. You're a joke in every Discord server, every forum, every IRC channel. People tolerate you at best and mock you behind your back.
+			</p>
+
+			<div class="terminal">
+				<p># What script kiddies think they look like:</p>
+				<p>[ACCESSING MAINFRAME...]</p>
+				<p>[BYPASSING FIREWALL...]</p>
+				<p>[YOU'RE IN]</p>
+				<p></p>
+				<p># What they actually look like:</p>
+				<p>Error: Module not found</p>
+				<p>Error: Permission denied</p>
+				<p>Error: Python 2 is deprecated you moron<span class="blink">_</span></p>
+			</div>
+
+			<p>
+				Want to actually be good? <span class="highlight">Learn to code.</span> Start with the basics. Read a book. Build something from scratch. Understand what your tools are doing instead of blindly executing them. Stop pretending and start learning.
+			</p>
+
+			<p>
+				Until then, you're just another skid embarrassing yourself online. And trust me—<span class="highlight">everyone can tell.</span>
+			</p>
+
+			<p style="margin-top: 3rem; font-size: 1rem; opacity: 0.7;">
+				Now get off this site and go read some documentation.
 			</p>
 		</main>
-		<Footer />
 	</body>
 </html>
