@@ -1,114 +1,122 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			body {
-				font-family: 'Courier New', monospace;
-				margin: 0;
-				padding: 0;
-				background: #0a0a0a;
-				color: #00ff00;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				min-height: 100vh;
-				text-align: center;
-			}
-			main {
-				max-width: 900px;
-				padding: 2rem;
-			}
-			h1 {
-				font-size: 3.5rem;
-				margin: 0 0 2rem 0;
-				color: #ff0000;
-				text-shadow: 0 0 10px #ff0000;
-				letter-spacing: 2px;
-			}
-			p {
-				font-size: 1.3rem;
-				line-height: 1.8;
-				margin-bottom: 1.5rem;
-			}
-			.highlight {
-				color: #ff4444;
-				font-weight: bold;
-			}
-			.terminal {
-				background: #1a1a1a;
-				border: 2px solid #00ff00;
-				padding: 1.5rem;
-				margin: 2rem 0;
-				text-align: left;
-				font-size: 1.1rem;
-			}
-			.blink {
-				animation: blink 1s infinite;
-			}
-			@keyframes blink {
-				0%, 50% { opacity: 1; }
-				51%, 100% { opacity: 0; }
-			}
-		</style>
+		<meta charset="UTF-8">
+		<title>Stop Skidding</title>
 	</head>
 	<body>
-		<main>
-			<h1>STOP SKIDDING</h1>
-			
-			<p>
-				Yeah, you. The one copy-pasting code you don't understand. The one downloading "hacking tools" from GitHub thinking you're elite. You're not a hacker. You're not even a programmer. You're a <span class="highlight">script kiddie</span>, and everyone knows it.
-			</p>
+		<h1>Stop Skidding: A Comprehensive Analysis of Script Kiddie Behavior and Why You Need to Quit</h1>
+		
+		<h2>Abstract</h2>
+		<p>
+			This document presents a thorough examination of the script kiddie phenomenon—individuals who utilize pre-written exploits and tools without fundamental understanding of the underlying systems. We identify the behavioral patterns, social consequences, and pathways toward legitimate skill acquisition.
+		</p>
 
-			<div class="terminal">
-				<p>$ whoami</p>
-				<p>> script_kiddie_detected</p>
-				<p>$ cat /proc/self/status | grep "Skills:"</p>
-				<p>> Skills: 0</p>
-				<p>> Actual_Knowledge: None</p>
-				<p>> Copy_Paste_Ability: Expert<span class="blink">_</span></p>
-			</div>
+		<h2>1. Introduction</h2>
+		<p>
+			You are reading this because you are, or know someone who is, a script kiddie. Let's be direct: copying and pasting code you don't understand does not make you a hacker, security researcher, or developer. It makes you a fraud. This paper will explain exactly why your current approach is counterproductive, embarrassing, and immediately recognizable to anyone with actual technical competence.
+		</p>
 
-			<p>
-				You really thought running someone else's exploit makes you dangerous? You can't write a function. You can't debug an error. Hell, you probably don't even know what a compiler is. You just run <span class="highlight">python exploit.py</span> and pray it works.
-			</p>
+		<h2>2. Identifying Characteristics of Script Kiddies</h2>
+		
+		<h3>2.1 Technical Incompetence Masked as Expertise</h3>
+		<p>
+			The primary identifier is the complete inability to modify, debug, or explain the tools being used. When your "exploit" fails, you have no recourse beyond downloading a different script. You cannot read error messages. You do not understand dependencies. The concept of a compiler remains mysterious. Your entire workflow consists of executing <code>python exploit.py</code> and hoping for results.
+		</p>
 
-			<p>
-				Every real developer can smell you from a mile away. You ask questions that Google answered 10 years ago. You don't read documentation. You don't understand the code you're running. You just want the glory without putting in the work.
-			</p>
+		<h3>2.2 Behavioral Patterns</h3>
+		<p>
+			Script kiddies exhibit predictable behavior across all platforms. Questions that have been answered thousands of times get asked again, not because the information is unavailable, but because reading documentation feels like work. The expectation is that someone else will provide step-by-step instructions, preferably in video format, so that minimal cognitive effort is required. When these instructions inevitably fail due to environmental differences, panic sets in, followed by more low-quality questions.
+		</p>
 
-			<p>
-				Here's the truth: <span class="highlight">Nobody respects you.</span> Not the developers. Not the security researchers. Not even other script kiddies. You're a joke in every Discord server, every forum, every IRC channel. People tolerate you at best and mock you behind your back.
-			</p>
+		<h3>2.3 Social Signaling Without Substance</h3>
+		<p>
+			Observe the GitHub repositories filled with forked "hacking tools" that have never been modified. Notice the Discord usernames with "hacker," "cyber," or "anon" suffixes. The aesthetic is carefully curated—dark terminals, green text, Matrix references—while the actual skills remain nonexistent. This performative behavior fools no one who matters.
+		</p>
 
-			<div class="terminal">
-				<p># What script kiddies think they look like:</p>
-				<p>[ACCESSING MAINFRAME...]</p>
-				<p>[BYPASSING FIREWALL...]</p>
-				<p>[YOU'RE IN]</p>
-				<p></p>
-				<p># What they actually look like:</p>
-				<p>Error: Module not found</p>
-				<p>Error: Permission denied</p>
-				<p>Error: Python 2 is deprecated you moron<span class="blink">_</span></p>
-			</div>
+		<h2>3. Why Nobody Respects You</h2>
 
-			<p>
-				Want to actually be good? <span class="highlight">Learn to code.</span> Start with the basics. Read a book. Build something from scratch. Understand what your tools are doing instead of blindly executing them. Stop pretending and start learning.
-			</p>
+		<h3>3.1 Developers</h3>
+		<p>
+			Professional developers see through your facade instantly. When you ask basic questions while claiming advanced knowledge, the contradiction is obvious. Your inability to understand fundamental concepts like functions, loops, data structures, or types reveals that you have no foundation. You are attempting to run before learning to walk, and it shows.
+		</p>
 
-			<p>
-				Until then, you're just another skid embarrassing yourself online. And trust me—<span class="highlight">everyone can tell.</span>
-			</p>
+		<h3>3.2 Security Researchers</h3>
+		<p>
+			Real security researchers spent years learning networking protocols, system architecture, assembly language, reverse engineering, and exploitation techniques. They read RFCs. They analyze binaries in debuggers. They write their own tools. Your use of their research without understanding it is insulting. You contribute nothing to the field while claiming association with it.
+		</p>
 
-			<p style="margin-top: 3rem; font-size: 1rem; opacity: 0.7;">
-				Now get off this site and go read some documentation.
-			</p>
-		</main>
+		<h3>3.3 Your Peers</h3>
+		<p>
+			Even other script kiddies recognize you as incompetent. The social hierarchy in these communities is based on perceived skill, and yours is transparently absent. You are tolerated as a source of entertainment—people share screenshots of your questions in private channels to mock you. This is not speculation. This is documented, repeated behavior across every technical community.
+		</p>
+
+		<h2>4. The Illusion Versus Reality</h2>
+
+		<h3>4.1 What You Think You Look Like</h3>
+		<p>
+			In your mind, you are a sophisticated operator. Commands fly across terminals. Systems fall before your expertise. Firewalls crumble. Mainframes are accessed. You are dangerous, elite, unstoppable.
+		</p>
+
+		<h3>4.2 What You Actually Look Like</h3>
+		<p>
+			In reality, you are staring at "ModuleNotFoundError" for the fifth time. Permission denied. Syntax error. Python version mismatch. You frantically search for another YouTube tutorial, hoping this one will finally work. Your terminal history is a graveyard of failed attempts at executing commands you don't understand. You cannot troubleshoot because you do not know what the code does. You are helpless, repeatedly, predictably.
+		</p>
+
+		<h2>5. Why This Approach Will Never Work</h2>
+
+		<h3>5.1 Tools Are Not Knowledge</h3>
+		<p>
+			Running an exploit you downloaded is not hacking. It is the computational equivalent of pressing a button someone else built. When that button breaks—and it will break because software is context-dependent—you have no recourse. You lack the knowledge to fix it, modify it, or even understand why it failed.
+		</p>
+
+		<h3>5.2 The Skill Gap Is Obvious</h3>
+		<p>
+			Every interaction broadcasts your incompetence. The questions you ask reveal what you don't know. The assumptions you make demonstrate gaps in fundamental understanding. People who actually write code can read your messages and immediately categorize you as someone who does not belong in technical discussions.
+		</p>
+
+		<h3>5.3 You Are Wasting Time</h3>
+		<p>
+			Every hour spent downloading and failing to execute someone else's tool is an hour you could have spent learning actual programming. You are months or years into this charade, and you still cannot write a basic script from scratch. This is not progress. This is stagnation with the illusion of activity.
+		</p>
+
+		<h2>6. The Path Forward</h2>
+
+		<h3>6.1 Accept Reality</h3>
+		<p>
+			You do not currently possess the skills you claim. This is not an insult—it is an observable fact. Accepting this is the prerequisite for improvement. Stop pretending. Start learning.
+		</p>
+
+		<h3>6.2 Learn Fundamentals</h3>
+		<p>
+			Pick a programming language. Python is fine. Java, C, JavaScript, Rust—the specific choice matters less than commitment. Work through a structured curriculum. Not YouTube videos. Not random Medium articles. A textbook or comprehensive course. Learn variables, conditionals, loops, functions, data structures, algorithms. Build the foundation that you currently lack.
+		</p>
+
+		<h3>6.3 Build Things</h3>
+		<p>
+			Write code from scratch. Not copying from StackOverflow—writing. Make mistakes. Debug them. Understand why your code fails and how to fix it. Build small projects. Then bigger projects. Document your work. Read others' code. Contribute to open source. Develop actual competence through practice.
+		</p>
+
+		<h3>6.4 Study Systems</h3>
+		<p>
+			If security interests you, learn how systems actually work. Networking protocols. Operating systems. Compilers. Databases. Web servers. Memory management. You cannot exploit what you do not understand. This knowledge is not optional—it is the entire foundation of the field.
+		</p>
+
+		<h2>7. Conclusion</h2>
+		<p>
+			You are currently a script kiddie. Everyone knows. Your GitHub profile knows. Your Discord messages know. Your failed terminal commands know. The people who answer your low-effort questions know, and they judge you for it.
+		</p>
+
+		<p>
+			But this is not permanent. The path from script kiddie to competent developer exists and is well-documented. Thousands have walked it. The requirements are clear: stop pretending, start learning, and put in the work.
+		</p>
+
+		<p>
+			The choice is yours. Continue embarrassing yourself while learning nothing, or develop actual skills that earn genuine respect. The former is easier in the short term. The latter is the only option with a future.
+		</p>
+
+		<p>
+			Now close this page and go read some documentation.
+		</p>
 	</body>
 </html>
