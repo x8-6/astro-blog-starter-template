@@ -1,8 +1,7 @@
-export async function POST({ request }) {
+export const POST = async ({ request }) => {
 	try {
 		const data = await request.json();
 		
-		// Log the analytics data
 		console.log('Analytics:', {
 			session: data.session,
 			page: data.page,
@@ -12,8 +11,6 @@ export async function POST({ request }) {
 			language: data.language
 		});
 		
-		// Store in memory or send to external service
-		// For now just return success
 		return new Response(JSON.stringify({ success: true }), {
 			status: 200,
 			headers: { 'Content-Type': 'application/json' }
@@ -24,4 +21,4 @@ export async function POST({ request }) {
 			headers: { 'Content-Type': 'application/json' }
 		});
 	}
-}
+};

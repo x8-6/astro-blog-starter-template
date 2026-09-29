@@ -1,4 +1,4 @@
-export async function POST({ request }) {
+export const POST = async ({ request }) => {
 	try {
 		const data = await request.json();
 		
@@ -18,4 +18,4 @@ export async function POST({ request }) {
 			headers: { 'Content-Type': 'application/json' }
 		});
 	}
-}
+};
