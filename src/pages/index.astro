@@ -6,42 +6,6 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-		<script defer src="https://cloud.umami.is/script.js" data-website-id="db3d3781-53de-40fe-9506-f00b19744acb"></script>
-		<script>
-			(function() {
-				const startTime = Date.now();
-				const sessionId = Date.now() + '-' + Math.random().toString(36).substr(2, 9);
-				
-				const trackData = {
-					session: sessionId,
-					page: window.location.pathname,
-					referrer: document.referrer || 'direct',
-					timestamp: new Date().toISOString(),
-					screen: screen.width + 'x' + screen.height,
-					language: navigator.language
-				};
-				
-				window.addEventListener('load', function() {
-					fetch('/api/analytics', {
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify(trackData)
-					}).catch(function(err) {
-						console.log('Analytics error:', err);
-					});
-				});
-				
-				window.addEventListener('beforeunload', function() {
-					const exitData = {
-						session: sessionId,
-						timeSpent: Math.round((Date.now() - startTime) / 1000),
-						timestamp: new Date().toISOString()
-					};
-					
-					navigator.sendBeacon('/api/analytics/exit', JSON.stringify(exitData));
-				});
-			})();
-		</script>
 		<style>
 			body {
 				font-family: 'EB Garamond', serif;
