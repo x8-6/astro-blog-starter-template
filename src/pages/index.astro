@@ -6,6 +6,32 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+		<script async src="https://umami.is/script.js" data-website-id="your-website-id"></script>
+		<script>
+			// Simple page view tracking
+			if (navigator.sendBeacon) {
+				const trackData = {
+					page: window.location.pathname,
+					referrer: document.referrer,
+					timestamp: new Date().toISOString(),
+					userAgent: navigator.userAgent
+				};
+				
+				// Track page view on load
+				window.addEventListener('load', function() {
+					console.log('Page view tracked:', trackData);
+					// You can send this to your own API endpoint
+					// navigator.sendBeacon('/api/track', JSON.stringify(trackData));
+				});
+				
+				// Track time on page
+				let startTime = Date.now();
+				window.addEventListener('beforeunload', function() {
+					const timeSpent = Math.round((Date.now() - startTime) / 1000);
+					console.log('Time spent on page:', timeSpent, 'seconds');
+				});
+			}
+		</script>
 		<style>
 			body {
 				font-family: 'EB Garamond', serif;
